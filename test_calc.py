@@ -18,13 +18,22 @@ class CalcTest(unittest.TestCase):
         "Деление"
         self.assertEqual(calc_me(111111111, 9,"/"), 12345679)
 
+    def test_oper(self):
+        "Возведение в степень"
+        """Позитивный, возведение в степень"""
+        self.assertEqual(calc_me(5, 5,"^"), 3125)
+
+    def test_mul(self):
+        """Негативный, умножение символов"""
+        self.assertEqual(calc_me(p, 2,"*"), 'ERROR: now it is does not supported')
+
     def test_div_neg(self):
         """Негативный, деление на ноль"""
         self.assertEqual(calc_me(12, 0,"/"), 'ERROR: Divide by zero!')
 
     def test_oper_neg(self):
         """Негативный, возведение в степень"""
-        self.assertEqual(calc_me(4, 2,"^"), 'ERROR: Uknow operation')
+        self.assertEqual(calc_me(5, '',"^"), 'ERROR: send me Number2')
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

@@ -1,6 +1,4 @@
-'''
-Calcultor v. 0.4
-'''
+''' Calcultor v. 0.4 '''
 
 def input_number():
     num = input("Введите число: ")
